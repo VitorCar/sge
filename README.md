@@ -25,11 +25,6 @@ Permissões e administração
 - Painel admin padrão do Django disponível em `/admin/`.
 
 
-Boas práticas
-------------
-- Não versionar credenciais (ex.: `senha.txt` deve ser removido do repositório).
-- Mantenha DEBUG= False em produção e configure ALLOWED_HOSTS em [`app.settings`](app/settings.py).
-
 Testes
 ------
 - Estrutura de testes por app (ex.: [brands/tests.py](brands/tests.py)). Rodar:
