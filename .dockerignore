@@ -1,0 +1,8 @@
+.venv
+.git
+.gitignore
+venv
+__pycache__
+senha.txt
+docke_information.txt
+DEADME.md

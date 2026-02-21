@@ -76,35 +76,35 @@ SGE - Produtos
         </thead>
         <tbody>
             {% for product in products %}
-            <tr>
-                <td>{{product.id}}</td>
-                <td>{{product.title}}</td>
-                <td>{{product.category}}</td>
-                <td>{{product.brand}}</td>
-                <td>{{product.cost_price}}</td>
-                <td>{{product.selling_price}}</td>
-                <td>{{product.serie_number}}</td>
-                <td>{{product.quantity}}</td>
-                <td>
-                    {% if perms.products.view_product %}
-                    <a href="{% url 'product_detail' product.id %}" class="btn btn-info btn-sm">
-                        <i class="bi bi-eye"></i>
-                    </a>
-                    {% endif %}
+                <tr>
+                    <td>{{product.id}}</td>
+                    <td>{{product.title}}</td>
+                    <td>{{product.category}}</td>
+                    <td>{{product.brand}}</td>
+                    <td>{{product.cost_price}}</td>
+                    <td>{{product.selling_price}}</td>
+                    <td>{{product.serie_number}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>
+                        {% if perms.products.view_product %}
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        {% endif %}
 
-                    {% if perms.products.change_product %}
-                    <a href="{% url 'product_update' product.id %}" class="btn btn-warning btn-sm">
-                        <i class="bi bi-pencil"></i>
-                    </a>
-                    {endif}
+                        {% if perms.products.change_product %}
+                        <a href="{% url 'product_update' product.id %}" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        {% endif %}
 
-                    {% if perms.products.delete_product %}
-                    <a href="{% url 'product_delete' product.id %}" class="btn btn-danger btn-sm">
-                        <i class="bi bi-trash"></i>
-                    </a>
-                    {% endif %}
-                </td>
-            </tr>
+                        {% if perms.products.delete_product %}
+                        <a href="{% url 'product_delete' product.id %}" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                        {% endif %}
+                    </td>
+                </tr>
             {% endfor %}
         </tbody>
     </table>
